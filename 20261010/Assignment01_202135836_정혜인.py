@@ -1,5 +1,23 @@
 import numpy as np
 
+
+# NumPy 연산 함수 TODO 파트
+
+np_arr = np.array([1, 2, 3, 4, 5])
+
+# TODO: NumPy 연산 함수를 사용하여 배열을 정규화
+np_arr_normalized = (np_arr - np_arr.min())/(np_arr.max() - np_arr.min())
+print(np_arr_normalized)
+
+# TODO: NumPy 연산 함수를 사용하여 배열을 0.0 ~ 1.0 범위의 float32 배열로 변환
+# TODO: 최종 배열의 최솟값 = 0.0, 최종 배열의 최댓값 = 1.0
+np_arr_final =  np_arr.astype(np.float32) / np_arr.max()
+print(np_arr_final)
+print(np_arr_final.dtype)
+
+
+# Section Project 파트
+
 raw_students = [
     "zg0505_짱구",
     "cs0822_철수",
@@ -17,7 +35,6 @@ raw_scores = np.array([
 ])
 
 subjects = ["국어", "수학", "과학"]
-
 
 # TODO: list comprehension을 활용해 raw_students 리스트에서 이름만 추출한 리스트 생성
 student_names = [x.split("_")[1] for x in raw_students]
